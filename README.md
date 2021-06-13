@@ -45,7 +45,7 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 
 ```
 
-You can also use the script 'scripts/mono_tum.sh'. Execute:
+You can also use the script `scripts/mono_tum.sh`. Execute:
 ```
 chmod +x scripts/mono_tum.sh
 ./scripts/mono_tum.sh
@@ -58,13 +58,13 @@ chmod +x scripts/mono_tum.sh
 2. Execute the following command. Change `KITTIX.yaml`by KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
 ```
 ./examples/mono_kitti Vocabulary/ORBvoc.txt examples/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
-``
+```
 
-You can also use the script 'scripts/mono_kitti.sh'. Execute:
+You can also use the script `scripts/mono_kitti.sh`. Execute:
 ```
 chmod +x scripts/mono_kitti.sh
 ./scripts/mono_kitti.sh
-````
+```
 
 ## EuRoC Dataset
 
@@ -79,7 +79,7 @@ chmod +x scripts/mono_kitti.sh
 ./examples/mono_euroc Vocabulary/ORBvoc.txt examples/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data examples/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 
-You can also use the script 'scripts/mono_euroc.sh'. Execute:
+You can also use the script `scripts/mono_euroc.sh`. Execute:
 ```
 chmod +x scripts/mono_euroc.sh
 ./scripts/mono_euroc.sh
