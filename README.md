@@ -26,12 +26,12 @@ git clone -b g2o https://github.com/lh9171338/MONO-ORB-SLAM2.git
 
 We provide a script `build.sh` to build the *Thirdparty* libraries and *ORB-SLAM2*. Please make sure you have installed all required dependencies (see section 1). Execute:
 ```
-cd MONO_ORB_SLAM2
+cd MONO-ORB-SLAM2
 chmod +x build.sh
 ./build.sh
 ```
 
-This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono_tum**, **mono_kitti**, **rgbd_tum**, **stereo_kitti**, **mono_euroc** and **stereo_euroc** in *Examples* folder.
+This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono_tum**, **mono_kitti**, and **mono_euroc** in *examples* folder.
 
 # 3. Examples
 
@@ -41,7 +41,14 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 
 2. Execute the following command. Change `TUMX.yaml` to TUM1.yaml,TUM2.yaml or TUM3.yaml for freiburg1, freiburg2 and freiburg3 sequences respectively. Change `PATH_TO_SEQUENCE_FOLDER`to the uncompressed sequence folder.
 ```
-./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUMX.yaml PATH_TO_SEQUENCE_FOLDER
+./examples/mono_tum Vocabulary/ORBvoc.txt examples/TUMX.yaml PATH_TO_SEQUENCE_FOLDER
+
+```
+
+You can also use the script 'scripts/mono_tum.sh'. Execute:
+```
+chmod +x scripts/mono_tum.sh
+./scripts/mono_tum.sh
 ```
 
 ## KITTI Dataset  
@@ -50,8 +57,14 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 
 2. Execute the following command. Change `KITTIX.yaml`by KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
 ```
-./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
+./examples/mono_kitti Vocabulary/ORBvoc.txt examples/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
+``
+
+You can also use the script 'scripts/mono_kitti.sh'. Execute:
 ```
+chmod +x scripts/mono_kitti.sh
+./scripts/mono_kitti.sh
+````
 
 ## EuRoC Dataset
 
@@ -59,17 +72,15 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 
 2. Execute the following first command for V1 and V2 sequences, or the second command for MH sequences. Change PATH_TO_SEQUENCE_FOLDER and SEQUENCE according to the sequence you want to run.
 ```
-./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_FOLDER/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
+./examples/mono_euroc Vocabulary/ORBvoc.txt examples/EuRoC.yaml PATH_TO_SEQUENCE_FOLDER/mav0/cam0/data examples/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 
 ```
-./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
+./examples/mono_euroc Vocabulary/ORBvoc.txt examples/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data examples/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 
-
-### Running Monocular Node
-For a monocular input from topic `/camera/image_raw` run node ORB_SLAM2/Mono. You will need to provide the vocabulary file and a settings file. See the monocular examples above.
-
-  ```
-  rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE
-  ```
+You can also use the script 'scripts/mono_euroc.sh'. Execute:
+```
+chmod +x scripts/mono_euroc.sh
+./scripts/mono_euroc.sh
+````
