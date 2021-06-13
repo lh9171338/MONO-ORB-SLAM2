@@ -1,0 +1,13 @@
+<launch>
+
+ 	<node pkg="ORB_SLAM2" type="Mono" name="Mono" output="screen">
+ 	    <remap from="/image_raw" to="/cam0/image_raw" />
+		<param name="strVocFile" value="$(find ORB_SLAM2)/Vocabulary/ORBvoc.txt" />
+ 	    <param name="strSettingsFile" value="$(find ORB_SLAM2)/examples/EuRoC.yaml" />
+		<param name="mStrOdomFrame" value="odom" />
+		<param name="mStrBodyFrame" value="body" />
+    </node>
+
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find ORB_SLAM2)/rviz/mono.rviz"/>
+
+</launch>
