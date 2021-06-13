@@ -19,7 +19,7 @@ You need to install [ROS](http://wiki.ros.org/ROS/Installation) first. Install i
 
 # 2. Building ORB-SLAM2 library and examples
 
-create workspace:
+Create workspace:
 ```
 mkdir -p catkin_ws/src
 cd catkin_ws/src
