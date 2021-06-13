@@ -1,4 +1,4 @@
-# G2O-MONO-ORB-SLAM2
+# CERES-MONO-ORB-SLAM2
 
 # 1. Prerequisites
 
@@ -54,11 +54,11 @@ chmod +x scripts/mono_tum.sh
 ./scripts/mono_tum.sh
 ```
 
-## KITTI Dataset  
+## KITTI Dataset
 
-1. Download the dataset (grayscale images) from http://www.cvlibs.net/datasets/kitti/eval_odometry.php 
+1. Download the dataset (grayscale images) from http://www.cvlibs.net/datasets/kitti/eval_odometry.php
 
-2. Execute the following command. Change `KITTIX.yaml`by KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
+2. Execute the following command. Change `KITTIX.yaml`by KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11.
 ```
 ./examples/mono_kitti Vocabulary/ORBvoc.txt examples/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
 ```
