@@ -1,5 +1,6 @@
-examples/*
-!examples/*.cc
+examples/mono_euroc
+examples/mono_kitti
+examples/mono_tum
 KeyFrameTrajectory.txt
 Thirdparty/DBoW2/build/
 Thirdparty/DBoW2/lib/
