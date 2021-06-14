@@ -84,7 +84,7 @@ cv::Mat Converter::toCvMat(const Eigen::Matrix3d& R, const Eigen::Vector3d& t)
 cv::Mat Converter::toCvMat(const Eigen::Vector7d& m)
 {
     Eigen::Quaterniond q(m.block<4, 1>(0, 0));
-    Eigen::Matrix3d R = q.toRotationMatrix();
+    Eigen::Matrix3d R = q.normalized().toRotationMatrix();
     Eigen::Vector3d t(m.block<3, 1>(4, 0));
     cv::Mat Tcw = Converter::toCvMat(R, t);
 
